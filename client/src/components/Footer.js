@@ -11,7 +11,7 @@ import { paymentLogo } from '../assets';
 
 import { MdLocationOn } from 'react-icons/md';
 import { BsPersonFill, BsPaypal } from 'react-icons/bs';
-import { logoLight } from '../assets';
+
 const Footer = () => {
   return (
     <div className="bg-black text-[#949494] py-20 font-titleFont">
@@ -84,7 +84,7 @@ const Footer = () => {
         <div className="flex flex-col justify-center ">
           <input
             className="bg-transparent border px-4 py-2 text-sm"
-            placeholder="e-mail"
+            placeholder="Your E-mail"
             type="text"
           />
           <button className="text-sm border text-white border-t-0 hover:bg-gray-900 active:bg-white active:text-black">
