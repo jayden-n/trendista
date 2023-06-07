@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import CartItem from '../components/CartItem';
 import { ToastContainer, toast } from 'react-toastify';
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
 const Cart = () => {
   const productData = useSelector((state) => state.trendista.productData);
   const userInfo = useSelector((state) => state.trendista.userInfo);
@@ -19,10 +21,18 @@ const Cart = () => {
     if (userInfo) {
       setPaynow(true);
     } else {
-      toast.error("Please sign in to Checkout :)")
+      toast.error('Please sign in to Checkout :)');
     }
   };
   // console.log(productData);
+
+  const payment = async (token) => {
+    await axios.post('http://localhost:8000/pay', {
+      amount: totalAmt * 100,
+      token: token,
+    });
+  };
+
   return (
     <div>
       <img
@@ -58,6 +68,19 @@ const Cart = () => {
           >
             Proceed to checkout
           </button>
+          {paynow && (
+            <div className="w-full mt-6 flex items-center justify-center">
+              <StripeCheckout
+                stripeKey="pk_test_51NGQF7EYrxeyUEBNAtr2ldy3oilc4wQFwjpQ2r4Faslfm4YVEzuzmSii1A8QLb7X387RuJxotc0VHXnivpRdDam900agcWbn6V"
+                name="Trendista Online Shopping"
+                amount={totalAmt * 100}
+                label="Pay to Trendista"
+                description={`Your Payment amount is $${totalAmt}`}
+                token={payment}
+                email={userInfo.email}
+              />
+            </div>
+          )}
         </div>
       </div>
       <ToastContainer
