@@ -1,10 +1,14 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addToCart } from '../redux/trendistaSlice';
 
 const ProductCard = (product) => {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
-  console.log(product);
+  // console.log(product);
   const _id = product.product.title;
   // To make the path route lower case.
   const idString = (_id) => {
@@ -12,7 +16,7 @@ const ProductCard = (product) => {
   };
   const rootId = idString(_id);
   // console.log(rootId);
-  console.log(product.product.isNew);
+  // console.log(product.product.isNew);
   const handleDetails = () => {
     navigate(`/product/${rootId}`, {
       state: {
@@ -20,6 +24,7 @@ const ProductCard = (product) => {
       },
     });
   };
+
   return (
     <div className="group relatives">
       <div
@@ -46,7 +51,21 @@ const ProductCard = (product) => {
               </p>
               <p className="font-semibold">${product.product.price}</p>
             </div>
-            <p className="absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500">
+            <p
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    _id: product.product._id,
+                    title: product.product.title,
+                    image: product.product.image,
+                    price: product.product.price,
+                    quantity: 1,
+                    description: product.product.description,
+                  })
+                )
+              }
+              className="absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500"
+            >
               Add to cart{' '}
               <span>
                 <BsArrowRight />
