@@ -43,8 +43,8 @@ const Footer = () => {
           <div className="text-base flex flex-col gap-2">
             <p>Nguyen, Jayden</p>
             <p>Mobile: (437)-326-2855</p>
-
             <p>E-mail: trendista@gmail.com</p>
+            <p>Address: Toronto, Canada, Earth</p>
           </div>
         </div>
         {/* ================== Locate Us Ends here ================== */}
