@@ -10,8 +10,7 @@ This web app is created with:
 - [React Router DOM](https://reacttraining.com/react-router/) version 6.11.2
 - [React-Redux.js](https://react-redux.js.org) version 8.0.7
 - [Redux Persist](https://github.com/rt2zz/redux-persist) version 6.0.0
-- [React-Toastify](https://fkhadra.github.io/react-toastify/introduction/) version 9.1.3
+- [React-Toastify](https://github.com/fkhadra/react-toastify) version 9.1.3
 - [Firebase](https://firebase.google.com) version 9.22.1
 - [React Stripe Checkout](https://github.com/azmenak/react-stripe-checkout) version 2.6.3
-
-- [Tailwind](https://tailwindcss.com/) for Styling
+- [TailwindCSS](https://tailwindcss.com/) for Styling components
