@@ -12,27 +12,30 @@ const Header = () => {
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
         <div>
-          <Link to="/" className="text-3xl font-bold">
+          <Link
+            to="/"
+            className="text-3xl font-bold font-bodyFont text-orange-400"
+          >
             Trendista
           </Link>
         </div>
 
         <div className="flex items-center gap-8">
           <ul className="flex items-center gap-8">
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Home
-            </li>
+            <Link to="/">
+              <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
+                Home
+              </li>
+            </Link>
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Pages
             </li>
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
               Shop
             </li>
+
             <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Element
-            </li>
-            <li className="text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300">
-              Blog
+              Blogs
             </li>
           </ul>
           <Link to="/cart">
