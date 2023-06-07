@@ -48,6 +48,27 @@ const Product = () => {
             <p className="text-xs text-gray-500"> (1 customer review)</p>
           </div>
           <p className="text-base text-gray-500 -mt-3">{details.description}</p>
+          <div className="flex gap-4">
+            <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
+              <p className="text-sm">Quantity</p>
+              <div className="flex items-center gap-4 text-sm font-semibold">
+                <button className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black">
+                  -
+                </button>
+                <span>{1}</span>
+                <button className="border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white cursor-pointer duration-300 active:bg-black">
+                  +
+                </button>
+              </div>
+            </div>
+            <button className="bg-black text-white py-3 px-6 active:bg-gray-800">
+              Add to cart
+            </button>
+          </div>
+          <p className="text-base text-gray-500">
+            Category:{' '}
+            <span className="font-medium capitalize">{details.category}</span>
+          </p>
         </div>
       </div>
     </div>
