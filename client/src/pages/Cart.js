@@ -4,7 +4,9 @@ import CartItem from '../components/CartItem';
 import { ToastContainer, toast } from 'react-toastify';
 const Cart = () => {
   const productData = useSelector((state) => state.trendista.productData);
+  const userInfo = useSelector((state) => state.trendista.userInfo);
   const [totalAmt, setTotalAmt] = useState('');
+  const [paynow, setPaynow] = useState(false);
   useEffect(() => {
     let price = 0;
     productData.map((item) => {
@@ -13,7 +15,13 @@ const Cart = () => {
     });
     setTotalAmt(price.toFixed(2));
   }, [productData]);
-
+  const handleCheckout = () => {
+    if (userInfo) {
+      setPaynow(true);
+    } else {
+      toast.error("Please sign in to Checkout :)")
+    }
+  };
   // console.log(productData);
   return (
     <div>
@@ -45,7 +53,7 @@ const Cart = () => {
             Total <span className="text-xl font-bold">${totalAmt}</span>
           </p>
           <button
-            // onClick={handleCheckout}
+            onClick={handleCheckout}
             className="text-base bg-black text-white w-full py-3 mt-6 hover:bg-gray-800 duration-300"
           >
             Proceed to checkout

@@ -45,6 +45,14 @@ export const trendistaSlice = createSlice({
     resetCart: (state) => {
       state.productData = [];
     },
+    // =============== User Start here ==============
+    addUser: (state, action) => {
+      state.userInfo = action.payload;
+    },
+    removeUser: (state) => {
+      state.userInfo = null;
+    },
+    // =============== User End here ================
   },
 });
 
