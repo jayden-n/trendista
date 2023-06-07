@@ -1,6 +1,10 @@
-# Trendista
+# Trendista 
 
-Trendista is an online clothing store that offers a curated selection of the latest fashion trends for men and women. At Trendista, we believe that fashion is a form of self-expression, and our mission is to provide you with the trendiest and most stylish pieces to help you create your unique style.
+Trendista is an online modern clothing store that sells the trendiest and most stylish pieces to help you create your unique style.
+
+## Description
+
+Created with **[React.js](https://react.dev/)**, and **[React-Redux.js](https://react-redux.js.org)** for state management. This web app allows online users to _sign in with their Google account_, which is powered by **Firebase Authentication** & **Database** services. Also, payments are securely handled through the **[Stripe API](https://stripe.com)**, which includes a default credit card for testing purposes.
 
 ## Technologies - Frameworks - Libraries
 
@@ -13,4 +17,12 @@ This web app is created with:
 - [React-Toastify](https://github.com/fkhadra/react-toastify) version 9.1.3
 - [Firebase](https://firebase.google.com) version 9.22.1
 - [React Stripe Checkout](https://github.com/azmenak/react-stripe-checkout) version 2.6.3
-- [TailwindCSS](https://tailwindcss.com/) for Styling components
+- [TailwindCSS](https://tailwindcss.com/) for styling components
+
+## Contributing
+
+Pull requests are welcomed and highly appreciated. Before making any major changes, please feel free to open an issue and initiate a discussion about your ideas. Your valuable input and collaboration are greatly valued.
+
+## License
+
+This web app is available under [MIT](https://choosealicense.com/licenses/mit/).
