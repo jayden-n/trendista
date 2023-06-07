@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+  const productData = useSelector((state) => state.trendista.productData);
+  return <div>Cart</div>;
+};
 
-export default Cart
+export default Cart;

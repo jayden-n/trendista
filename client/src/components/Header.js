@@ -2,6 +2,7 @@ import React from 'react';
 import { cartImg } from '../assets/index';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
 const Header = () => {
   const productData = useSelector((state) => state.trendista.productData);
   console.log(productData);
@@ -32,12 +33,14 @@ const Header = () => {
               Blog
             </li>
           </ul>
-          <div className="relative">
-            <img className="w-6" src={cartImg} alt="" />
-            <span className="absolute w-6 top-2 left-0 text-sm flex items-center justify-center font-semibold ">
-              {productData.length}
-            </span>
-          </div>
+          <Link to='/cart'>
+            <div className="relative">
+              <img className="w-6" src={cartImg} alt="" />
+              <span className="absolute w-6 top-2 left-0 text-sm flex items-center justify-center font-semibold ">
+                {productData.length}
+              </span>
+            </div>
+          </Link>
           <img
             className="w-8 h-8 rounded-full"
             src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

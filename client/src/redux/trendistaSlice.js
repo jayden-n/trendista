@@ -19,8 +19,42 @@ export const trendistaSlice = createSlice({
         state.productData.push(action.payload);
       }
     },
+    incrementQuantity: (state, action) => {
+      const item = state.productData.find(
+        (item) => item._id === action.payload._id
+      );
+      if (item) {
+        item.quantity++;
+      }
+    },
+    decrementQuantity: (state, action) => {
+      const item = state.productData.find(
+        (item) => item._id === action.payload._id
+      );
+      if (item.quantity === 1) {
+        item.quantity = 1;
+      } else {
+        item.quantity--;
+      }
+    },
+    deleteItem: (state, action) => {
+      state.productData = state.productData.filter(
+        (item) => item._id !== action.payload
+      );
+    },
+    resetCart: (state) => {
+      state.productData = [];
+    },
   },
 });
 
-export const { addToCart } = trendistaSlice.actions;
+export const {
+  addToCart,
+  deleteItem,
+  resetCart,
+  incrementQuantity,
+  decrementQuantity,
+  addUser,
+  removeUser,
+} = trendistaSlice.actions;
 export default trendistaSlice.reducer;
