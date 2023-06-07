@@ -81,6 +81,13 @@ const Cart = () => {
               />
             </div>
           )}
+          <div className="flex flex-col text-center mt-6 text-red-500">
+            <p>*** Please use the following test payments ***</p>
+            <div className="mt-2">
+              <p>4242 4242 4242 4242</p>
+              <p>Exp: 12/34 - CVC: 123</p>
+            </div>
+          </div>
         </div>
       </div>
       <ToastContainer
