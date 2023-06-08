@@ -1,6 +1,6 @@
 # Trendista 
 
-Trendista is an modern clothing store that sells trendy and stylish pieces to help you become a fashionista.
+Trendista is a modern clothing store that sells trendy and stylish pieces to help you become a fashionista.
 
 ## Description
 
