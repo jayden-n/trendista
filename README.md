@@ -11,7 +11,7 @@ Created with **[React.js](https://react.dev/)**, and **[React-Redux.js](https://
 This web app is created with:
 
 - [React.js](https://reactjs.org) version 18.2.0
-- [React Router DOM](https://reacttraining.com/react-router/) version 6.11.2
+- [React Router DOM](https://reactrouter.com/en/main) version 6.11.2
 - [React-Redux.js](https://react-redux.js.org) version 8.0.7
 - [Redux Persist](https://github.com/rt2zz/redux-persist) version 6.0.0
 - [React-Toastify](https://github.com/fkhadra/react-toastify) version 9.1.3
