@@ -17,7 +17,7 @@ This web app is created with:
 - [React-Toastify](https://github.com/fkhadra/react-toastify) version 9.1.3
 - [Firebase](https://firebase.google.com) version 9.22.1
 - [React Stripe Checkout](https://github.com/azmenak/react-stripe-checkout) version 2.6.3
-- [TailwindCSS](https://tailwindcss.com/) for styling components
+- [TailwindCSS](https://tailwindcss.com/) for styling
 
 ## Contributing
 
