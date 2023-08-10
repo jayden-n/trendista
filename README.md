@@ -1,5 +1,7 @@
 # Trendista 
 
+![trendista](https://github.com/jayden-n/trendista/assets/94060508/e8f73212-11f1-4b1e-83de-61288a600b1a)
+
 Trendista is a modern clothing store that sells trendy and stylish pieces to help you become a fashionista.
 
 ## Description
